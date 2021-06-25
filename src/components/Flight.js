@@ -7,13 +7,17 @@ function Flight(props) {
       <div className="departureinfo">
         <p className="city">{props.cityCodeFrom} </p>
         <p className="time">
-          {DateTime.fromMillis(props.dTime * 1000).toFormat("hh:mm")}{" "}
+          {DateTime.fromMillis(props.dTime * 1000).toLocaleString(
+            DateTime.TIME_SIMPLE
+          )}{" "}
         </p>
       </div>
       <div className="arrivalinfo">
         <p className="city">{props.flyTo} </p>
         <p className="time">
-          {DateTime.fromMillis(props.aTime * 1000).toFormat("hh:mm")}{" "}
+          {DateTime.fromMillis(props.aTime * 1000).toLocaleString(
+            DateTime.TIME_SIMPLE
+          )}{" "}
         </p>
       </div>
 

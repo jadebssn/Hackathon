@@ -7,6 +7,7 @@ function Flights(props) {
     <>
       {props.flights.map((flight, i) => (
         <Flight
+          key={i}
           cityCodeFrom={flight.cityCodeFrom}
           flyTo={flight.flyTo}
           dTime={flight.dTime}
