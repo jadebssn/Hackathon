@@ -1,0 +1,23 @@
+.flight {
+  display: flex;
+  background-color: rgb(192, 183, 183);
+  border: 2px solid black;
+  margin: 10px;
+}
+
+.departureinfo {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+.arrivalinfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.price {
+  margin-left: 300px;
+  margin-top: 40px;
+  color: red;
+}
