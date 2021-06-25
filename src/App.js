@@ -1,6 +1,6 @@
-import logo from "./logo.svg";
 import "./App.css";
 import { useEffect, useState } from "react";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Flights from "./components/Flights";
 import Dropdown from "./components/Dropdown";
 
@@ -25,8 +25,16 @@ function App() {
 
   return (
     <div className="App">
-      <Dropdown setCity={setCity} setDeparture={setDeparture}/>
-      <Flights flights={flights} />
+      <BrowserRouter>
+        <Dropdown setCity={setCity} setDeparture={setDeparture}/>
+        <Switch>
+          <Route  exact path="/" component={() => 
+            flights.length > 0 ?
+              <Flights flights={flights} />
+              : "No flights"
+          } />
+        </Switch>
+      </BrowserRouter>
     </div>
   );
 }

@@ -1,6 +1,8 @@
 import Flight from "./Flight";
 
 function Flights(props) {
+
+  console.log(props);
   return (
     <>
       {props.flights.map((flight, i) => (
